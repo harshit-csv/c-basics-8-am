@@ -1,6 +1,6 @@
 #include <stdio.h>
 void main (){
-    int a  = (67 == 65) + 2;
+    int a  = (67 == 65);
     int b  = (67 != 67);
 
     printf("Equal to: %d\n", a);
