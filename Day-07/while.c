@@ -1,34 +1,57 @@
 #include <stdio.h>
 #include <unistd.h> // For read()
-void main (){
+void main()
+{
     int temp, result = 0;
-    char op, cop;
+    char op, ocp;
 
-    do{
+    do
+    {
         printf("Next Value: ");
         scanf("%d", &temp);
-
+        ocp = op;
         printf("Operation: ");
-        read(0, &cop, 1);
+        scanf(" %c", &op);
 
-        switch(op){
-            case '+':
-                result += temp;
-                break;
-            case '=':
-                result += temp;
-                goto res;
-                break;
+        switch (op)
+        {
+        case '+':
+            result += temp;
+            break;
+        case '-':
+            result -= temp;
+            break;
+        case '*':
+            result *= temp;
+            break;
+        case '/':
+            result /= temp;
+            break;
+        case '=':
+            goto res;
         }
-        
-    } while(1);
+    } while (1);
 
-    res:
-    printf("Result = %d",result);
+res:
+    switch (ocp)
+    {
+    case '+':
+        result += temp;
+        break;
+    case '-':
+        result -= temp;
+        break;
+    case '*':
+        result *= temp;
+        break;
+    case '/':
+        result /= temp;
+        break;
+    case '=':
+        goto res;
+    }
+    printf("Result = %d", result);
 }
-
-
-
 
 /*
 
@@ -36,10 +59,10 @@ a \n
 
 
 
-23 + 
-23 + 
-23 + 
-22 = 
-Result = 
+23 +
+23 +
+23 +
+22 =
+Result =
 
 */
