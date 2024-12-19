@@ -3,9 +3,10 @@ void main (){
     int d1, d2, d3, d4, d5, d6, d7, d8, d9, d0;    
     d1= d2 = d3 = d4  = d5  = d6  = d7 = d8 = d9 = d0 = 0;
         
-    int n, digit, total = 0;
+    long long int n;
+    int  digit, total = 0;
     printf("Enter the number: ");    
-    scanf("%d",  &n); // 8798
+    scanf("%lld",  &n); // 8798
 
     while(n!=0){
         digit = n % 10;

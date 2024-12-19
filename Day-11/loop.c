@@ -5,8 +5,8 @@ void main (){
     for (int i = 0; i < 10; i++){
         count[i] = 0;
     }
-        
-    int n, digit, totalDigits = 0;
+    long int n;
+    int digit, totalDigits = 0;
     printf("Enter the number: ");    
     scanf("%d",  &n); // 8798
 
